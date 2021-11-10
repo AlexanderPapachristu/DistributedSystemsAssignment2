@@ -18,9 +18,10 @@ class Client {
 			
 			Scanner sc = new Scanner(System.in);
 			String line = "";
-			while(!line.equalsIgnoreCase("exit")){
+			String option = "";
+			while(!option.equalsIgnoreCase("exit")){
 			System.out.println("Please enter an option: Math, Time, Palindrome, Binary, Hex\nOr enter exit to exit the code.");
-			String option = sc.nextLine();
+			option = sc.nextLine();
 			
 			//****function to hold all the work to solve math problems*********
 			if(option.equalsIgnoreCase("math")){

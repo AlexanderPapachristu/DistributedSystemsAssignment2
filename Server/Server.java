@@ -84,7 +84,7 @@ class ClientHandler implements Runnable {
 				else if(line.equalsIgnoreCase("Time"))
 					out.println(getDateTime());
 				else if(line.contains("Palindrome") || line.contains("palindrome")){
-					String pal = line.replace("(?i)palindrome", "");
+					String pal = line.replaceAll("(?i)palindrome", "");
 					out.println(checkPalindrome(pal));
 				}
 				else if(line.contains("Binary") || line.contains("binary")){
@@ -168,7 +168,6 @@ class ClientHandler implements Runnable {
 	
 	public static String checkPalindrome(String pal){
 		String revString = "";
-		
 		for(int i = (pal.length() - 1); i >= 0; i--){
 			revString += pal.charAt(i);
 		}
